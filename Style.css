@@ -1,0 +1,139 @@
+/* --- RESET & BASE STYLES --- */
+* {
+    box-sizing: border-box; /* Makes sizing easier */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Subtle background gradient */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* --- LAYOUT CONTAINER --- */
+/* Keeps everything neatly in the middle on big screens */
+body > * {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- HEADER & PHOTO --- */
+header {
+    /* A cool blue-to-purple gradient background */
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    display: flex; /* Aligns photo next to text */
+    align-items: center;
+    gap: 20px; /* Space between photo and text */
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes the square photo a perfect circle */
+    border: 4px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+    object-fit: cover; /* Ensures photo doesn't stretch weirdly */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+header p {
+    margin: 5px 0 0 0;
+    font-weight: 500;
+}
+
+/* --- SECTIONS (Education, Projects, Contact) --- */
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Soft shadow for depth */
+    border-top: 4px solid #4facfe; /* Colorful accent line at the top */
+}
+
+h2 {
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* --- LISTS & FORMS --- */
+ul li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 3px solid #00f2fe; /* Little blue accent on list items */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #4facfe; /* Highlight color when typing */
+}
+
+/* --- PROJECT CARDS (Dynamic Items) --- */
+.project-item {
+    background: #f9fbfd;
+    border: 1px solid #eef2f7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* --- BUTTONS --- */
+button {
+    cursor: pointer;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px; /* Pill-shaped buttons */
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effects */
+}
+
+button:hover {
+    transform: translateY(-2px); /* Moves up slightly on hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#add-project-btn {
+    background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%); /* Green gradient */
+    color: #054d33;
+    width: 100%;
+}
+
+.delete-btn {
+    background: #ff6b6b;
+    color: white;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+button[type="submit"] {
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); /* Blue gradient */
+    color: white;
+    width: 100%;
+    font-size: 1.1rem;
+}
